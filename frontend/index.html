@@ -1,0 +1,87 @@
+<!-- frontend\index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipariş Takibi</title>
+  <style>
+    /* Stil ayarları */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="email"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .status {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .status.error {
+      color: red;
+    }
+
+    .status.success {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sipariş Ver</h1>
+    <form id="orderForm">
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required placeholder="E-posta adresinizi girin">
+      <button type="submit" id="submitButton">Sipariş Ver</button>
+    </form>
+    <h2>Sipariş Durumu</h2>
+    <div id="orderStatus" class="status"></div>
+  </div>
+
+  <script src="script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
